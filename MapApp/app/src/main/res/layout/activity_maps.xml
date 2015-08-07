@@ -1,0 +1,46 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:weightSum="2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="0dp" android:id="@+id/map" tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="5">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:text="&lt;"
+            android:id="@+id/btn_prev"
+            android:layout_weight="1"
+            android:onClick="doBtnPrev" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/txt_title"
+            android:layout_weight="3"
+            android:textSize="30sp"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:text=">"
+            android:id="@+id/btn_next"
+            android:layout_weight="1"
+            android:onClick="doBtnNext" />
+    </LinearLayout>
+
+</LinearLayout>
+
